@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<!--
+    Dopetrope by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+<head>
+    <title>OPENALE 3.0</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="icon" href="images/faviconmike2.png" type="image/x-icon">
+</head>
+<body class="left-sidebar is-preload">
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <section id="header">
+
+        <!-- Logo -->
+        <h1><a href="index.html">OPENALE 3.0</a></h1>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li class="current">
+                    <a href="recursos.html">Recursos</a>
+                    <ul>
+                        <li><a href="isorecursos.html">Implantación de Sistemas Operativos</a></li>
+                        <li><a href="hardwarerecursos.html">Fundamentos del Hardware</a></li>
+                        <li><a href="redesrecursos.html">Planificación y Administración de Redes</a></li>
+                        <li><a href="marcarecursos.html">Lenguaje de Marcas</a></li>
+                        <li><a href="bbddrecursos.html">Gestión de Bases de Datos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="practicas.html">Prácticas</a>
+                    <ul>
+                        <li><a href="isopracticas.html">Implantación de Sistemas Operativos</a></li>
+                        <li><a href="hardwarepracticas.html">Fundamentos del Hardware</a></li>
+                        <li><a href="redespracticas.html">Planificación y Administración de Redes</a></li>
+                        <li><a href="marcapracticas.html">Lenguaje de Marcas</a></li>
+                        <li><a href="bbddpracticas.html">Gestión de Bases de Datos</a></li>
+                    </ul>
+                </li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="presentacion.html">Presentación</a></li>
+            </ul>
+        </nav>
+
+    </section>
+
+    <!-- Main -->
+    <section id="main">
+        <header class="pi">
+            <h2 class="empty-heading">&nbsp;</h2>
+        </header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    
+                    <!-- Sidebar -->
+                    <section class="boxtarea">
+                        <!-- Título y explicación -->
+                        <h3>Tablas de Caracteres para Expresiones Regulares (REGEX)</h3>
+                        <p>Las tablas de caracteres para expresiones regulares proporcionan una referencia rápida de los caracteres válidos y sus significados dentro del contexto de las expresiones regulares (REGEX). Son útiles para comprender y recordar los patrones comunes utilizados para buscar y manipular texto. Las expresiones regulares se utilizan comúnmente en herramientas de línea de comandos como `grep` y `egrep` para realizar búsquedas avanzadas y manipulación de texto en archivos y flujos de texto, permitiendo buscar patrones específicos en el texto, como cadenas de caracteres, formatos de fecha, direcciones de correo electrónico, entre otros. Con `grep` (y `egrep`, que es una versión más avanzada de `grep` que admite expresiones regulares extendidas), puedes usar patrones REGEX para realizar búsquedas más flexibles y complejas, como buscar todas las líneas en un archivo que contengan una determinada palabra, todas las líneas que comiencen con una letra mayúscula, o todas las líneas que coincidan con un formato de fecha específico. La comprensión de los caracteres válidos y sus significados en las expresiones regulares es fundamental para utilizar eficazmente `grep` y `egrep` en situaciones de búsqueda y manipulación de texto.</p>
+                
+                        <table class="custom-table">
+                            <caption>Caracteres válidos para BRE/ERE y su significado</caption>
+                            <thead>
+                                <tr>
+                                    <th>Carácter</th>
+                                    <th>Significado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>\</td>
+                                    <td>Escapa el siguiente carácter</td>
+                                </tr>
+                                <tr>
+                                    <td>^</td>
+                                    <td>Comienzo de línea</td>
+                                </tr>
+                                <tr>
+                                    <td>$</td>
+                                    <td>Final de línea</td>
+                                </tr>
+                                <tr>
+                                    <td>.</td>
+                                    <td>Un carácter cualquiera</td>
+                                </tr>
+                                <tr>
+                                    <td>[lista de caracteres]</td>
+                                    <td>Un carácter de los indicados en la lista</td>
+                                </tr>
+                                <tr>
+                                    <td>[^lista de caracteres]</td>
+                                    <td>Un carácter de los no indicados en la lista</td>
+                                </tr>
+                                <tr>
+                                    <td>*</td>
+                                    <td>Ningún, uno o varias veces del carácter o grupo anterior</td>
+                                </tr>
+                                <tr>
+                                    <td>\&lt;</td>
+                                    <td>Inicio de palabra. Los caracteres válidos:a-zA-Z 0-9</td>
+                                </tr>
+                                <tr>
+                                    <td>\></td>
+                                    <td>Final de palabra. Los caracteres válidos:a-zA-Z 0-9</td>
+                                </tr>
+                                <tr>
+                                    <td>&lt;palabra&gt;</td>
+                                    <td>Coincidencia con palabra. Los caracteres válidos:a-zA-Z 0-9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="custom-table">
+                            <caption>Caracteres válidos para BRE y su significado</caption>
+                            <thead>
+                                <tr>
+                                    <th>Carácter</th>
+                                    <th>Significado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>\{n\}</td>
+                                    <td>n veces el carácter anterior</td>
+                                </tr>
+                                <tr>
+                                    <td>\{n,\}</td>
+                                    <td>Al menos n veces el carácter anterior</td>
+                                </tr>
+                                <tr>
+                                    <td>\{n,m\}</td>
+                                    <td>Entre n y m veces el carácter anterior</td>
+                                </tr>
+                                <tr>
+                                    <td>\(BRE\)</td>
+                                    <td>Memorización de una BRE</td>
+                                </tr>
+                                <tr>
+                                    <td>\1, \2, \3, …</td>
+                                    <td>BRE memorizada</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="custom-table">
+                            <caption>Caracteres válidos para ERE y su significado</caption>
+                            <thead>
+                                <tr>
+                                    <th>Carácter</th>
+                                    <th>Significado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>?</td>
+                                    <td>0 ó 1 vez el carácter o grupo anterior</td>
+                                </tr>
+                                <tr>
+                                    <td>+</td>
+                                    <td>De 1 a n veces el carácter o grupo anterior</td>
+                                </tr>
+                                <tr>
+                                    <td>\{n\}</td>
+                                    <td>n veces el carácter anterior</td>
+                                </tr>
+                                <tr>
+                                    <td>\{n,\}</td>
+                                    <td>Al menos n veces el carácter anterior</td>
+                                </tr>
+                                <tr>
+                                    <td>\{n,m\}</td>
+                                    <td>Entre n y m veces el carácter anterior</td>
+                                </tr>
+                                <tr>
+                                    <td>(ere1)</td>
+                                    <td>Agrupación</td>
+                                </tr>
+                                <tr>
+                                    <td>ere1|ere2|ere3</td>
+                                    <td>Alternativas</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+
+                    <!-- Copyright -->
+                    <div id="copyright">
+                        <ul class="links">
+                            <li>&copy; Proyecto de Alejandro Herrera Jiménez basado en una plantilla de HTML5 UP.</li>
+                            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <h2 class="hidden-header">Footer</h2>
+    </section>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+	<head>
+		<title>OPENALE 3.0</title>
+		<meta charset="utf-8" >
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="assets/css/main.css" >
+        <link rel="icon" href="images/faviconmike2.png" type="image/x-icon">
+	</head>
+	<body class="left-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header">
+
+					<!-- Logo -->
+						<h1><a href="index.html">OPENALE 3.0</a></h1>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Inicio</a></li>
+								<li class="current">
+									<a href="recursos.html">Recursos</a>
+									<ul>
+										<li><a href="isorecursos.html">Implantación de Sistemas Operativos</a></li>
+										<li><a href="hardwarerecursos.html">Fundamentos del Hardware</a></li>
+										<li><a href="redesrecursos.html">Planificación y Administración de Redes</a></li>
+										<li><a href="marcarecursos.html">Lenguaje de Marcas</a></li>
+										<li><a href="bbddrecursos.html">Gestión de Bases de Datos</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="practicas.html">Prácticas</a>
+									<ul>
+										<li><a href="isopracticas.html">Implantación de Sistemas Operativos</a></li>
+										<li><a href="hardwarepracticas.html">Fundamentos del Hardware</a></li>
+										<li><a href="redespracticas.html">Planificación y Administración de Redes</a></li>
+										<li><a href="marcapracticas.html">Lenguaje de Marcas</a></li>
+										<li><a href="bbddpracticas.html">Gestión de Bases de Datos</a></li>
+									</ul>
+								</li>
+								<li><a href="contacto.html">Contacto</a></li>
+								<li><a href="presentacion.html">Presentación</a></li>
+							</ul>
+						</nav>
+
+				</section>
+
+            <!-- Main -->
+                <section id="main">
+                    <header class="pi">
+                        <h2 class="empty-heading">&nbsp;</h2>
+                    </header>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                
+                                <!-- Sidebar -->
+                                <section class="boxtarea">
+                                    <h3>Práctica: Control de Procesos</h3>
+                                    <p>Realiza un documento en el que se refleje todos los comandos vistos en el aula referente al control de procesos, junto con las opciones de comando más prácticas.</p>
+                                    <p>Deberás poner ejemplos prácticos de utilización.</p>
+                                    <h3>Comandos:</h3>
+                                    <div class="command-grid">
+                                        <ul>
+                                            <li>ps</li>
+                                            <li>top</li>
+                                            <li>htop</li>
+                                        </ul>
+                                        <ul>
+                                            <li>kill</li>
+                                            <li>jobs</li>
+                                            <li>fg</li>
+                                        </ul>
+                                        <ul>
+                                            <li>bg</li>
+                                            <li>pstree</li>
+                                            <li>nohup</li>
+                                        </ul>
+                                        <ul>
+                                            <li>disown</li>
+                                            <li>nice</li>
+                                            <li>renice</li>
+                                        </ul>
+                                        <ul>
+                                            <li>killall</li>
+                                            <li>pidof</li>
+                                            <li></li> <!-- Espacio en blanco para mantener el diseño -->
+                                        </ul>
+                                    </div>
+                                    <h3>Comando ps:</h3>
+                                    <ol>
+                                        <li>-a: Muestra los procesos de todos los usuarios.</li>
+                                        <li>-A: Muestra todos los procesos del sistema.</li>
+                                        <li>-e: Muestra todos los procesos del sistema.</li>
+                                        <li>-f: Proporciona una salida detallada con información extendida sobre los procesos.</li>
+                                        <li>-F: Muestra una salida de "formato completo" (similar a -f pero más corta).</li>
+                                        <li>-h: No muestra las líneas de encabezado.</li>
+                                        <li>-l: Muestra una lista larga con información sobre los procesos.</li>
+                                        <li>-u &lt;usuario&gt;: Muestra los procesos asociados con un usuario específico.</li>
+                                        <li>-U &lt;usuario&gt;: Muestra los procesos de todos los usuarios excepto uno específico.</li>
+                                        <li>-v: Muestra información extendida, incluyendo el tamaño de la memoria virtual.</li>
+                                        <li>-x: Incluye los procesos que no tienen terminal asociada (TTY).</li>
+                                    </ol>
+                                    
+                                    <p>
+                                        El comando ps en sistema Linux se utiliza para mostrar información sobre los procesos en ejecución en el sistema. Aquí tienes algunas opciones útiles y ejemplos prácticos de su uso.
+                                    </p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/1.png" alt="Imagen">
+                                    </div>
+                                    <p>Ejecutar ps sin ninguna opción nos muestra información sobre los procesos que se están ejecutando dentro de la propia shell, esta salida nos muestra el PID (identificador unico de proceso), TTY (terminal asociada al proceso), Time (Tiempo de CPU consumido por el proceso), y CMD (Nombre del comando o programa asociado con el proceso).</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/2.png" alt="Imagen">
+                                    </div>
+                                    <p>Esta opción (-f) proporciona una salida más completa que incluye detalles como el UID (identificador de usuario), y PPID (identificador de proceso padre).</p>
+                                    <p>Por ejemplo en este caso el proceso padre de ps -f es la bash, es decir, la bash a sido el proceso que ha arracando o ejecutado el proceso ps -f.</p>
+                                    <p>ps -l nos muestra por pantalla datos interesantes como pueden ser el flag (numero de acuerdo al tipo de proceso), S: Estado del proceso., PRI: Prioridad del proceso, NI: Nivel de niceness del proceso, SZ: Tamaño de la memoria virtual del proceso...</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/3.png" alt="Imagen">
+                                    </div>
+                                    <p>Diferentes estados en los que podemos encontrar un proceso:</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/4.png" alt="Imagen">
+                                    </div>
+                                    <p>Si yo quiero ver todos los procesos que hay en el sistema y no solo los que están asociados a la terminal actual, pues para hacer esto posible podemos usar ps -ef.</p>
+                                    <p>ps -ef muestra todos los procesos del sistema junto con información detallada en formato largo.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/5.png" alt="Imagen">
+                                    </div>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/6.png" alt="Imagen">
+                                    </div>
+                                    <p>El proceso sbin/init es el primer proceso que se ejecuta cuando arranca un sistema Unix o Linux. Es el proceso inicial del sistema y tiene el PID (identificador de proceso) 1. Es esencial para el funcionamiento del sistema, ya que es responsable de iniciar y gestionar otros procesos y servicios del sistema, esto significa que todos los demás procesos son descendientes directos o indirectos de sbin/init, ya que todos los procesos en el sistema forman una jerarquía de procesos que se origina en sbin/init.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/7.png" alt="Imagen">
+                                    </div>
+                                    <p>La imagen proporcionada muestra la salida del comando ls -1 /sbin/init. Este comando muestra que sbin/init es un enlace simbólico a /lib/systemd/systemd. Esto significa que el proceso init ahora es un enlace a systemd, que es el respondable del proceso de arranque del sistema operativo.</p>
+                                    <p>-u: Muestra procesos del usuario especificado.</p>
+                                    <p>ps -u username ; Muestra los procesos asociados con el usuario especificado, donde "username" es el nombre del usuario.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/8.png" alt="Imagen">
+                                    </div>
+                                    <p>aux: Muestra todos los procesos con información ampliada.</p>
+                                    <p>ps aux; Este comando muestra una lista de todos los procesos del sistema, incluyendo los de otros usuarios, junto con información detallada sobre el uso de CPU, memoria y más.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/10.png" alt="Imagen">
+                                    </div>
+                                    <p>--forest: Muestra una vista jerárquica de procesos.</p>
+                                    <p>ps -e –forest ; Proporciona una vista jerárquica de los procesos, mostrando la relación entre los procesos padres e hijos de manera visual.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/11.png" alt="Imagen">
+                                    </div>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/12.png" alt="Imagen">
+                                    </div>
+                                    <p>Esto mismo lo conseguimos con el comando ps -uxf que nos muestra todos los procesos del usuario actual (alejandro) se esten ejecutando en la terminal actual o en otra en forma de arbol permitiendome ver la dependencia o el proceso padre de cada uno de los procesos.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/13.png" alt="Imagen">
+                                    </div>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/14.png" alt="Imagen">
+                                    </div>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/15.png" alt="Imagen">
+                                    </div>
+                                    <p>Como habitualmente las salidas de los comandos ejecutados son extensas, podemos añadir un paginador con less o un filtro con grep o egrep para lograr encontrar la información que andamos buscando.</p>
+                                    <p>Por ejemplo si queremos saber si se esta ejecutando sleep por ejemplo, ejecutamos el comando ps -ef | grep sleep, con esto puedo ver todos los procesos sleep que estan funcionando en mi máquina, gracias a el filtro grep nos hace más facil este tipo de búsquedas.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/16.png" alt="Imagen">
+                                    </div>
+                                    <h3>Comando top:</h3>
+                                    <p>El comando top es una herramienta de supervisión en tiempo real que muestra una pantalla dinámica con información sobre los procesos en ejecución y la carga del sistema. </p>
+                                    <p>La cabecera de la salida del comando top proporciona un resumen de la actividad del sistema y la utilización de recursos. Incluye información como el tiempo de actividad del sistema, la carga promedio del CPU, el número de tareas en ejecución, la utilización de la CPU y la memoria, y el espacio de intercambio (swap) disponible. Estos datos ayudan a los usuarios a monitorear el rendimiento del sistema y a identificar posibles cuellos de botella o problemas de recursos.</p>
+                                    <p>El cuerpo de la pantalla dinámica nos proporciona información detallada sobre la actividad del sistema y los procesos en ejecución. Aquí está una explicación de los principales campos que se muestran en la salida:</p>
+                                    <p>PID: Identificador único del proceso.
+                                        USER: Usuario al que pertenece el proceso.
+                                        PR: Prioridad del proceso.
+                                        NI: Nivel de renice del proceso.
+                                        VIRT: Tamaño virtual del proceso.
+                                        RES: Tamaño residente del proceso.
+                                        SHR: Tamaño compartido del proceso.
+                                        S: Estado del proceso (S para dormido, R para en ejecución, Z para zombi, etc.).
+                                        %CPU: Porcentaje de uso de CPU por parte del proceso.
+                                        %MEM: Porcentaje de uso de memoria por parte del proceso.
+                                        TIME+: Tiempo total de CPU utilizado por el proceso. 
+                                        COMMAND: Nombre del comando o proceso.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/17.png" alt="Imagen">
+                                    </div>
+                                    <p>Si quiero ordenar los procesos en la ventana dinámica que nos muestra top , por ejemplo por consumo de memoria le doy a la tecla M mayusc, por consumo de cpu P mayúscula, y T ordeno por tiempo de actividad.</p>
+                                    <p>Luego tengo otras opciones si pongo c , muestra la ruta completa del comando en lugar de solo el nombre.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/18.png" alt="Imagen">
+                                    </div>
+                                    <p>Dentro de top podemos matar un proceso, para ello pulsamos la tecla k y nos pide el PID del proceso que queremos finalizar por ejemplo, este caso vamos a finalizar el propio proceso top</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/19.png" alt="Imagen">
+                                    </div>
+                                    <p>Como vemos en la siguiente imagen nos saca de la ventana dinámica que nos ofrece top al finalizar dicho proceso. Con top -b | grep “nombre proceso” podemos identificar o encontrar un proceso concreto, esto nos sirve para averiguar un PID y luego usarlo para eliminar ese determinado proceso.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/20.png" alt="Imagen">
+                                    </div>
+                                    <p>Otra opción interesante en este caso puede ser pulsar V mayúscula en la ventana dinámica de top, con esto conseguimos poner la vista en formato árbol.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/21.png" alt="Imagen">
+                                    </div>
+                                    <p>El comando top tambien nos brinda la opción de poder filtrar los procesos por usuario de forma que si dentro de la ventana dinámica del comando usamos la opción u, nos pide un nombre de usuario y tras indicarle el nombre nos muestra los procesos del usuario indicado como vemos a continuación.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/22.png" alt="Imagen">
+                                    </div>
+                                    <p>Otra opción sería utilizar la tecla m para cambiar la forma de ver la memoria en la cabecera de la pantalla dinámica de top. La tecla t cambia la forma de ver el %cpu.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/23.png" alt="Imagen">
+                                    </div>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/24.png" alt="Imagen">
+                                    </div>
+                                    <p>Por último quiero destacar que como hemos visto muchas formas de como cambiar la apariencia y la forma de presentarnos los datos el comando top, si queremos hacer estos cambios de apariencia persistentes para otras ocasiones en las que ejecutemos el comando podemos usar W mayúscula para grabar configuración.</p>
+                                    <h3>Comando htop:</h3>
+                                    <p>htop es una herramienta dinámica similar a top, la cual nos enseña los procesos que están en ejecución en un sistema linux.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/25.png" alt="Imagen">
+                                    </div>
+                                    <p>Si queremos ordenar los procesos por consumo de memoria, consumo de cpu, tiempo de ejecución…, podemos hacer esto pulsando F6 y eligiendo el criterio por el cual queremos ordenar.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/26.png" alt="Imagen">
+                                    </div>
+                                    <p>Si nos fijamos en la cabecera de la ventana de htop nos muestra el porcentaje de uso de cada uno de los cores de nuestro procesador. Además de esto nos indica información similar a la cabecera del comando top indicandonos información sobre el uso de la RAM, la SWAP y el resumen de tareas.</p>
+                                    <p>Lo siguiente que vamos a ver es como matar un proceso con htop, para ello vamos a crear un proceso en segundo plano.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/27.png" alt="Imagen">
+                                    </div>
+                                    <p>Cuando entramos en htop lo primero que tenemos que hacer es buscar dicho proceso para ellos pulsamos F3 y escribimos sleep.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/28.png" alt="Imagen">
+                                    </div>
+                                    <p>Una vez lo tenemos localizamos pulsamos enter y F9 para que nos aparezca la opción para finalizar un determinado proceso, y elegimos la señal 15 para cargarnoslo sin forzar. La diferencia principal entre kill -9 y kill -15 es que kill -9 es una terminación brusca y forzada del proceso, mientras que kill -15 es una forma más suave de terminar un proceso, permitiéndole realizar tareas de limpieza antes de finalizar.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/29.png" alt="Imagen">
+                                    </div>
+                                    <p>Una vez hecho esto si buscamos con F3 el comando sleep no nos muestra resultado alguno.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/30.png" alt="Imagen">
+                                    </div>
+                                    <p>Si pulsamos F5 vemos la vista de los procesos en modo arbol.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/31.png" alt="Imagen">
+                                    </div>
+                                    <h3>Comando kill:</h3>
+                                    <p>El comando kill es una utilidad en sistemas Unix y Linux que se utiliza para enviar señales a procesos en ejecución. Estas señales pueden utilizarse para controlar el comportamiento de los procesos, como detenerlos, pausarlos, reanudarlos o finalizarlos. El uso más común del comando kill es para terminar procesos que están ejecutándose en el sistema.</p>
+                                    <p>kill -l nos indica los tipos de señales que le podemos enviar a uno o varios procesos.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/32.png" alt="Imagen">
+                                    </div>
+                                    <p>Aquí detallo una descripción de algunas señales comunes que se pueden enviar utilizando el comando kill en sistemas Unix/Linux:</p>
+                                    <ul id="miLista">
+                                        <li>SIGTERM (15): Termina un proceso de manera ordenada. Los procesos pueden capturar esta señal para realizar tareas de limpieza antes de finalizar.</li>
+                                        <li>SIGKILL (9): Termina un proceso de manera abrupta. Se utiliza cuando un proceso no responde a señales más suaves y debe finalizarse de manera abrupta.</li>
+                                        <li>SIGHUP (1): Indica recarga o reinicio suave. En la práctica, puede ser utilizada por los procesos para realizar recargas o reinicios suaves, como volver a cargar la configuración.</li>
+                                        <li>SIGINT (2): Interrumpe la ejecución de un proceso desde el teclado. Se envía al presionar Ctrl+C en la terminal.</li>
+                                        <li>SIGSTOP (17): Pausa la ejecución de un proceso. Fuerza la detención de un proceso. Es similar a SIGKILL, pero en lugar de terminar el proceso, lo pausa.</li>
+                                        <li>SIGCONT (18): Reanuda la ejecución de un proceso pausado por SIGSTOP.</li>
+                                    </ul>
+                                    <p>Para el primer ejemplo práctico ejecuto dos procesos en segundo plano en una terminal aparte.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/33.png" alt="Imagen">
+                                    </div>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/34.png" alt="Imagen">
+                                    </div>
+                                    <p>Luego los busco con el comando ps -ef egrepeado y una vez que los tengo los finalizo con el comando kill  PID1 PID2.</p>
+                                    <p>El comando kill si no le indicamos -signal, finaliza el proceso usando la señal SIGTERM.</p>
+                                    <p>Para finalizar algún proceso usando algún otro tipo de señal lo tendríamos que hacer de la siguiente forma: kill -9 PID_del_proceso.</p>
+                                    <p>Este comando fuerza la terminación inmediata de un proceso utilizando kill con señal SIGKILL.</p>
+                                    <p>Otra posible opción que nos permite en este caso  pkill es la de eliminar procesos que coincidan con un patrón.</p>
+                                    <p>pkill -f patron_del_proceso.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/35.png" alt="Imagen">
+                                    </div>
+                                    <h3>Comando jobs:</h3>
+                                    <p>El comando jobs se utiliza en el shell de Unix/Linux para administrar trabajos en segundo plano asociados con la sesión de la shell actual. Aquí tienes algunas opciones y ejemplos prácticos de uso:</p>
+                                    <p>-l: Muestra información detallada sobre los trabajos, incluyendo el número de trabajo, el estado y el comando.</p>
+                                    <ul id="miLista2">
+                                        <li>p: Muestra solo los números de proceso de los trabajos en segundo plano.</li>
+                                        <li>-n: Muestra solo los trabajos que han cambiado desde la última notificación.</li>
+                                        <li>-r: Muestra solo los trabajos en ejecución.</li>
+                                        <li>-s: Muestra solo los trabajos suspendidos.</li>
+                                    </ul>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/36.png" alt="Imagen">
+                                    </div>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/37.png" alt="Imagen">
+                                    </div>
+                                    <p>En este ejemplo hemos lanzado dos procesos en segundo plano y con jobs hemos visto el estado de los mismos, con job -l nos informa además del PID del mismo, una vez hecho esto nos apoyamos del comando kill para supender o ejecutar lo mismo y con jobs -s / jobs -r vemos información de los procesos detenidos y corriendo en ese instante.</p>
+                                    <h3>Comando fg:</h3>
+                                    <p>El comando fg se utiliza para llevar un trabajo suspendido o un proceso en segundo plano a primer plano en la sesión de la shell actual. Aquí están algunas opciones prácticas y ejemplos de uso:</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/38.png" alt="Imagen">
+                                    </div>
+                                    <p>De esta forma he conseguido llevar el trabajo 2 a primer plano.</p>
+                                    <h3>Comando bg:</h3>
+                                    <p>El comando bg se utiliza para poner un trabajo suspendido en segundo plano, lo que permite que continúe su ejecución en segundo plano. </p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/39.png" alt="Imagen">
+                                    </div>
+                                    <p>En este ejemplo he ejecutado sleep en primer plano y lo he detenido al deternelo me aparece en la salida del comando jobs -l y para pasarlo a segundo plano para que este se ejecute hago un bg segido del número de trabajo.</p>
+                                    <h3>Comando pstree:</h3>
+                                    <p>El comando pstree muestra una representación visual de los procesos en ejecución en forma de un árbol. Aquí tienes algunas opciones comunes y ejemplos prácticos de cómo utilizar pstree:</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/40.png" alt="Imagen">
+                                    </div>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/41.png" alt="Imagen">
+                                    </div>
+                                    <p>Con pstree -p nos muestra los procesos en ejecución en forma de arbol indicándonos los PID de proceso.</p>
+                                    <p>En el ejemplo que viene a continuación con ps vemos el proceso bash en ejecución en la shell actual y si ejecutamos un pstree PID nos muestra los procesos hijos que tiene ese determinado proceso, si además ejecutamos el mismo comando con la opción -s nos muestra los procesos hijos y padres de bash.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/42.png" alt="Imagen">
+                                    </div>
+                                    <p>pstree -n ordena la salida por PID</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/43.png" alt="Imagen">
+                                    </div>
+                                    <h3>Comando nohup:</h3>
+                                    <p>El comando nohup se utiliza para ejecutar comandos de manera que sigan ejecutándose incluso después de que se cierre la terminal o la sesión de inicio de sesión del usuario.</p>
+                                    <p>-c, --ignore-interrupts: Ignora las señales de interrupción como SIGINT. Esto evita que el comando se detenga si se presiona Ctrl+C.</p>
+                                    <p>-p, --preserve: Conserva la variable de entorno $HOME del usuario que llama. Esto asegura que las referencias a $HOME en el comando no se cambien.</p>
+                                    <p>-a, --append: Anexa la salida estándar y de error al archivo especificado en lugar de sobrescribirlo.</p>
+                                    <p>-o, --output: Especifica el archivo donde se redirige la salida estándar.</p>
+                                    <p>-e, --error: Especifica el archivo donde se redirige la salida de error.</p>
+                                    <p>-h, --help: Muestra el mensaje de ayuda del comando nohup.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/44.png" alt="Imagen">
+                                    </div>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/45.png" alt="Imagen">
+                                    </div>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/46.png" alt="Imagen">
+                                    </div>
+                                    <p>En este ejemplo, hemos copiado el contenido de la carpeta "Descargas" a un directorio que creamos específicamente para este propósito. Al cerrar la terminal, el proceso principal termina, pero el proceso secundario continuara ejecutándose. Esto es gracias al uso de nohup, que permite que los procesos continúen incluso después de que se cierre la su proceso padre.</p>
+                                    <p>La copia de los archivos se completó con éxito, como se evidencia por la ausencia de mensajes de error en el archivo "nohup.out". Si hubiera habido algún error durante la ejecución del proceso de copia, estos se habrían registrado en dicho archivo para su revisión posterior.</p>
+                                    <p>En resumen, el uso de nohup garantizó que el proceso de copia de archivos se completara sin interrupciones, incluso después de cerrar la terminal (proceso padre bash), y que cualquier problema durante la ejecución quedara registrado para su posterior análisis.</p>
+                                    <p>Puedes utilizar nohup para ejecutar procesos que toman mucho tiempo en completarse, como procesos de respaldo o procesos de análisis de datos.</p>
+                                    <h3>Comando disown:</h3>
+                                    <p>El comando disown se utiliza en Unix/Linux para quitar un trabajo o proceso del control del shell. Esto significa que el trabajo ya no estará asociado con el shell y no será enviado una señal SIGHUP (hangup) cuando se cierre la terminal. Aquí tienes algunas opciones comunes y ejemplos prácticos de utilización del comando disown.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/47.png" alt="Imagen">
+                                    </div>
+                                    <p>Tras esto cerramos nuestra terminal y abrimos una nueva y vemos que el gedit no se ha cerrado y nuestros procesos siguen ejecutándose.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/48.png" alt="Imagen">
+                                    </div>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/49.png" alt="Imagen">
+                                    </div>
+                                    <h3>Comando nice y renice:</h3>
+                                    <p>nice y renice son dos comandos relacionados pero tienen propósitos ligeramente diferentes:</p>
+                                    <p>nice: Este comando se utiliza para ajustar la prioridad de ejecución de un nuevo proceso que se está iniciando. Cuando ejecutas un comando con nice, estás especificando la prioridad que deseas para ese proceso antes de que comience su ejecución.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/50.png" alt="Imagen">
+                                    </div>
+                                    <p>Las prioridades en linux van del -20 al +19 de forma que el -20 es el proceso o procesos con mayor prioridad y el +19 los que menor prioridad tienen.</p>
+                                    <p>El campo NI o mejor dicho nice indica la prioridad del proceso en la salida del comando      ps.</p>
+                                    <p>renice: Este comando se utiliza para cambiar la prioridad de ejecución de un proceso que ya está en ejecución. Con renice, puedes ajustar la prioridad de un proceso que ya está en curso.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/51.png" alt="Imagen">
+                                    </div>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/52.png" alt="Imagen">
+                                    </div>
+                                    <h3>Comando killall:</h3>
+                                    <p>El comando killall se utiliza para enviar señales de terminación a procesos que están ejecutando un comando específico. Aquí tienes algunas opciones comunes y ejemplos prácticos de utilización del comando killall:</p>
+                                    <p>Opciones Prácticas del Comando killall:</p>
+                                    <ol>
+                                        <li>-i, --interactive: Solicita confirmación antes de enviar la señal de terminación a cada proceso.</li>
+                                        <li>-e, --exact: Solo termina los procesos que coinciden exactamente con el nombre del comando.</li>
+                                        <li>-q, --quiet: No muestra mensajes de error si no se encuentran procesos para terminar.</li>
+                                        <li>-s: mata procesos utilizando una señal especifica en lugar de SIGTERM.</li>
+                                    </ol>
+                                    <p>Creo una serie de procesos sleep con un bucle for y a continuación usaremos el comando killall.</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/53.png" alt="Imagen">
+                                    </div>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/54.png" alt="Imagen">
+                                    </div>
+                                    <p>Si lo hago con -i me pide confirmación:</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/55.png" alt="Imagen">
+                                    </div>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/56.png" alt="Imagen">
+                                    </div>
+                                    <h3>Comando pidof:</h3>
+                                    <p>El comando pidof se utiliza para encontrar el ID de proceso (PID) de un programa en ejecución. Aquí tienes algunas opciones comunes y ejemplos prácticos de utilización del comando pidof:</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/57.png" alt="Imagen">
+                                    </div>
+                                    <p>Esto mostrará el PID de todos los procesos que coinciden con el nombre del programa especificado. Sin embargo con la opción -s obtenemos el PID de un único proceso.</p>
+                                    <p>Omitir ciertos PIDs: pidof -o 1234,5678 programa.</p>
+                                    <p>Esto mostrará el PID de todos los procesos que coinciden con el nombre del programa especificado, excepto los PIDs especificados..</p>
+                                    <div>
+                                        <img src="images/isopracticaprocesos/58.png" alt="Imagen">
+                                    </div>
+                                </section>
+                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            
+            <!-- Footer -->
+            <section id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+    
+                            <!-- Copyright -->
+                            <div id="copyright">
+                                <ul class="links">
+                                    <li>&copy; Proyecto de Alejandro Herrera Jiménez basado en una plantilla de HTML5 UP.</li>
+                                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                                </ul>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+                <h2 class="hidden-header">Footer</h2>
+            </section>
+
+        </div>
+
+        <!-- Scripts -->
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery.dropotron.min.js"></script>
+            <script src="assets/js/browser.min.js"></script>
+            <script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
+
+    </body>
+</html>
+
